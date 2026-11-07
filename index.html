@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Аптека Здоровье — онлайн-аптека</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="/" class="logo">💊 Аптека <span>Здоровье</span></a>
+
+      <div class="search">
+        <input id="search" type="text" placeholder="Поиск лекарств и товаров..." />
+      </div>
+
+      <button class="cart-btn" id="cartBtn">
+        🛒 Корзина <span class="cart-count" id="cartCount">0</span>
+        <span class="cart-total" id="cartTotal">0 ₽</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="filters">
+      <h2>Каталог</h2>
+      <div class="filters__row">
+        <select id="categoryFilter">
+          <option value="all">Все категории</option>
+          <option value="Лекарства">Лекарства</option>
+          <option value="Витамины">Витамины</option>
+          <option value="Детские товары">Детские товары</option>
+          <option value="Гигиена">Гигиена</option>
+        </select>
+
+        <select id="sortFilter">
+          <option value="default">По умолчанию</option>
+          <option value="price-asc">Цена: по возрастанию</option>
+          <option value="price-desc">Цена: по убыванию</option>
+          <option value="name">По названию</option>
+        </select>
+
+        <label class="price-filter">
+          До <input id="maxPrice" type="number" min="0" placeholder="макс. цена" />
+        </label>
+      </div>
+    </section>
+
+    <section id="catalog" class="catalog">
+      <p class="loading">Загрузка товаров...</p>
+    </section>
+  </main>
+
+  <!-- Модальное окно корзины -->
+  <div class="modal" id="cartModal">
+    <div class="modal__content">
+      <div class="modal__head">
+        <h3>Корзина</h3>
+        <button class="modal__close" id="closeCart">✕</button>
+      </div>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="modal__footer">
+        <strong>Итого: <span id="modalTotal">0 ₽</span></strong>
+        <div class="modal__actions">
+          <button class="btn btn--ghost" id="clearCart">Очистить</button>
+          <button class="btn btn--primary" id="checkout">Оформить заказ</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Аптека «Здоровье». Учебный проект. Не является реальной аптекой.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

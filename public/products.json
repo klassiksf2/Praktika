@@ -1,0 +1,6 @@
+[
+  { "id": 1, "name": "Парацетамол 500 мг №20", "category": "Лекарства", "price": 85, "form": "таблетки", "manufacturer": "Озон", "image": "/img/1.jpg" },
+  { "id": 2, "name": "Витамин D3 2000 МЕ №60", "category": "Витамины", "price": 650, "form": "капсулы", "manufacturer": "Solgar", "image": "/img/2.jpg" },
+  { "id": 3, "name": "Подгузники 4 (9-14 кг) №42", "category": "Детские товары", "price": 1250, "form": "упаковка", "manufacturer": "Pampers", "image": "/img/3.jpg" },
+  { "id": 4, "name": "Антисептик для рук 100 мл", "category": "Гигиена", "price": 150, "form": "флакон", "manufacturer": "Санитель", "image": "/img/4.jpg" }
+]
